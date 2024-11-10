@@ -1,0 +1,102 @@
+.guest-info {
+  max-width: 800px; /* Increased max width for a larger component */
+  margin: 20px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+.guest-info h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.guest-details,
+.guest-details-two,
+.guest-summary {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 100%;
+}
+
+.guest-details {
+  align-items: flex-start;
+}
+
+.guest-summary {
+  gap: 16px;
+}
+
+.guest-detail-item,
+.guest-summary-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+input[type="number"] {
+  width: 60px;
+}
+
+input[type="email"],
+input[type="tel"],
+input[type="text"] {
+  width: 100%;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+input[readonly] {
+  background-color: #f1f1f1;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Styling for validation messages */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 8px;
+  padding-left: 5px;
+}
+
+/* Add a container for error messages to ensure they are always visible below the input fields */
+.guest-detail-item .error {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Add a margin at the bottom of the form to give space for validation and other elements */
+.guest-info .guest-detail-item {
+  margin-bottom: 30px; /* Increased bottom margin for better spacing */
+}

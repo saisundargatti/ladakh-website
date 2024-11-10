@@ -1,0 +1,101 @@
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.image-container img {
+  width: 80%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Mobile-first styles */
+.discover {
+  text-align: center;
+  padding: 20px;
+}
+
+.discover h2 {
+  font-size: 24px; /* Smaller heading for mobile */
+  margin-bottom: 15px;
+}
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the testimonials on small screens */
+  gap: 20px; /* Space between the testimonials */
+}
+
+.testimonial {
+  flex: 1 1 100%; /* Full width on small screens */
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 350px; /* Add a max-width for consistency */
+}
+
+.testimonial-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonial-image img {
+  width: 80px; /* Smaller image size for mobile */
+  height: 80px;
+  border-radius: 50%;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.testimonial-name span {
+  color: #f0c23b;
+}
+
+.testimonial p {
+  font-size: 14px; /* Smaller font size for mobile */
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .testimonials {
+    flex-direction: row;
+    justify-content: space-evenly; /* Spread out testimonials */
+  }
+
+  .testimonial {
+    flex: 1 1 30%; /* Three testimonials per row */
+    max-width: 320px; /* Adjust max-width for better spacing */
+  }
+
+  .discover h2 {
+    font-size: 36px; /* Larger heading for larger screens */
+  }
+
+  .testimonial-image img {
+    width: 100px; /* Larger image for bigger screens */
+    height: 100px;
+  }
+
+  .testimonial p {
+    font-size: 16px; /* Standard font size for larger screens */
+  }
+}

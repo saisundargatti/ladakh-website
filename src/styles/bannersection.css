@@ -1,0 +1,126 @@
+/* Base mobile-first styles */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #f3f4f6;
+  box-sizing: border-box;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.icon-button {
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-section {
+  display: block; /* Make the image section visible on all screen sizes */
+  width: 100%;
+  margin-top: 16px; /* Space between text and image on small screens */
+}
+
+.landscape-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Medium screens and up (>= 768px) */
+@media (min-width: 768px) {
+  .container {
+    padding: 24px;
+    display: flex;
+    flex-direction: row; /* Align text and image side by side */
+    justify-content: space-between; /* Separate text and image sections */
+  }
+
+  .text-section {
+    text-align: left;
+    align-items: flex-start;
+    flex: 1; /* Allows image section to move right */
+  }
+
+  .info-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .icon-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .image-section {
+    margin-left: 24px; /* Add some space between text and image */
+    width: 40%; /* Set width of the image section on larger screens */
+  }
+}
+
+/* Large screens and up (>= 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    padding: 32px;
+  }
+
+  .text-section {
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .info-section {
+    gap: 32px;
+  }
+
+  .icon-button {
+    width: 44px;
+    height: 44px;
+  }
+}
